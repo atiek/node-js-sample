@@ -1,0 +1,10 @@
+node:
+  build: ./app
+  ports:
+   - "8080:80"
+  links:
+   - mongo
+mongo:
+  build: ./db
+  ports:
+   - "27017:27017"
